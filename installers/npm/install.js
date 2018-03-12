@@ -29,11 +29,15 @@ binstall(url, {path: binariesDir, strip: 1},
 ).then(function(successMessage) {
     // Linux
     if(operatingSystem == "linux") {
-      fs.copySync(binariesDir + "linux/elm-make.linux.x64", binariesDir + "elm-make", {overwrite: true})
+      console.log("Overriding elm-make binary to allow GHC flags.")
+      fs.copySync(binariesDir + "/linux/elm-make.linux.x64", binariesDir + "/elm-make", {overwrite: true})
+      console.log("Elm-make binary overridden. Please pass GHC flags for optimum performance.")
     }
     // MacOS
     else if(operatingSystem == "darwin") {
-      fs.copySync(binariesDir + "mac/elm-make.darwin", binariesDir + "elm-make", {overwrite: true})
+      console.log("Overriding elm-make binary to allow GHC flags.")
+      fs.copySync(binariesDir + "/mac/elm-make.darwin", binariesDir + "/elm-make", {overwrite: true})
+      console.log("Elm-make binary overridden. Please pass GHC flags for optimum performance.")
     }
     console.log(successMessage);
   }, function(errorMessage) {
