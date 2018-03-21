@@ -1,6 +1,6 @@
 {
   "name": "@influential/elm",
-  "version": "0.18.2",
+  "version": "0.18.3",
   "description": "The Elm Platform: Binaries for the Elm programming language.",
   "preferGlobal": true,
   "license": "BSD-3-Clause",
