@@ -4,7 +4,8 @@ var fs = require("fs-extra");
 var packageInfo = require(path.join(__dirname, "package.json"));
 
 // Use major.minor.patch from version string - e.g. "1.2.3" from "1.2.3-alpha"
-var binVersion = packageInfo.version.replace(/^(\d+\.\d+\.\d+).*$/, "$1");
+// var binVersion = packageInfo.version.replace(/^(\d+\.\d+\.\d+).*$/, "$1");
+var binVersion = '0.18.0';
 
 // 'arm', 'ia32', or 'x64'.
 var arch = process.arch;
